@@ -1,6 +1,7 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Index from "./pages/Index.jsx";
 import { Button, useColorMode } from "@chakra-ui/react";
+import ChatUI from './components/ChatUI';
 
 function App({ colorMode, setColorMode }) {
   const { toggleColorMode } = useColorMode();
@@ -17,6 +18,7 @@ function App({ colorMode, setColorMode }) {
       </Button>
       <Routes>
         <Route exact path="/" element={<Index />} />
+        <Route path="/chat" element={<ChatUI />} />
       </Routes>
     </Router>
   );
